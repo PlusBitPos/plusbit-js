@@ -11,9 +11,7 @@ module.exports = {
     },
     pubKeyHash: 0x4b,
     scriptHash: 0x75,
-    wif: 0xcb,
-    coin: coins.XBA,
-    isPoS: true
+    wif: 0xcb
   },
   dynamic: {
      messagePrefix: '\x18Bitcoin Signed Message:\n',
@@ -24,7 +22,8 @@ module.exports = {
     pubKeyHash: 0x1e,
     scriptHash: 0x0a,
     wif: 0x8c,
-    coin: coins.DYN
+    coin: coins.DYN,
+    isPoS: false
   },
   ravencoin: {
     messagePrefix: '\x18Bitcoin Signed Message:\n',
@@ -35,7 +34,8 @@ module.exports = {
     pubKeyHash: 0x3c, // https://dash-docs.github.io/en/developer-reference#opcodes
     scriptHash: 0x7a,
     wif: 0x80,
-    coin: coins.RVN
+    coin: coins.RVN,
+    isPoS: false
   },
   dash: {
     messagePrefix: '\x19DarkCoin Signed Message:\n',

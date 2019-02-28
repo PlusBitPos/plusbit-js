@@ -348,7 +348,7 @@ Transaction.fromBuffer = function (buffer, network = networks.bitcoin, __noStric
 }
 
 Transaction.fromHex = function (hex, network) {
-  return Transaction.fromBuffer(new Buffer.from(hex, 'hex'), null, network)
+  return Transaction.fromBuffer(Buffer.from(hex, 'hex'), network)
 }
 
 Transaction.isCoinbaseHash = function (buffer) {
@@ -512,7 +512,6 @@ Transaction.prototype.__byteLength = function (__allowWitness) {
   }
 
   return (
-    (this.network.isPoS ? 12 : 8) +
     (hasWitnesses ? 10 : 8) +
     varuint.encodingLength(this.ins.length) +
     varuint.encodingLength(this.outs.length) +
@@ -991,8 +990,6 @@ Transaction.prototype.__toBuffer = function (buffer, initialOffset, __allowWitne
   } else {
     writeInt32(this.version)
   }
-
-  if (this.network.isPoS) writeUInt32(this.time)
 
   var hasWitnesses = __allowWitness && this.hasWitnesses()
 
