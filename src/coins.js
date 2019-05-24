@@ -66,7 +66,7 @@ coins.isValidCoin = typeforce.oneOf(
   coins.isDynamic,
   coins.isBitcoinAir,
   coins.isHash,
-  coin.isXuez
+  coins.isXuez
 )
 
 module.exports = coins
