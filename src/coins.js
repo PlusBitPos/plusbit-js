@@ -51,7 +51,7 @@ coins.isBitcoinAir = function (network) {
 coins.isHash = function (network) {
   return typeforce.value(coins.HASH)(network.coin)
 }
-coins.xuez = function (network) {
+coins.isXuez = function (network) {
   return typeforce.value(coins.XUEZ)(network.coin)
 }
 
