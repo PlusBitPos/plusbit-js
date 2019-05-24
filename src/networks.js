@@ -14,6 +14,17 @@ module.exports = {
     wif: 0x3F,
     coin: coins.HASH
   },
+  xuez: {
+    messagePrefix: '\x18Bitcoin Signed Message:\n',
+    bip32: {
+      public: 0x022D2533,
+      private: 0x0221312B
+    },
+    pubKeyHash: 0x4b,
+    scriptHash: 0x12,
+    wif: 0xd4,
+    coin: coins.XUEZ
+  },
   bitcoinair: {
      messagePrefix: '\x18Bitcoin Signed Message:\n',
     bip32: {
