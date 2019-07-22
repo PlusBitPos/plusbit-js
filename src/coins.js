@@ -13,7 +13,8 @@ const coins = {
   DYN: 'dyn',
   XBA: 'xba',
   HASH: 'hash',
-  XUEZ: 'xuez'
+  XUEZ: 'xuez',
+  QBC: 'qbc'
 }
 
 coins.isBitcoin = function (network) {
@@ -54,6 +55,9 @@ coins.isHash = function (network) {
 coins.isXuez = function (network) {
   return typeforce.value(coins.XUEZ)(network.coin)
 }
+coins.isQbc = function (network) {
+  return typeforce.value(coins.QBC)(network.coin)
+}
 
 coins.isValidCoin = typeforce.oneOf(
   coins.isBitcoin,
@@ -66,7 +70,8 @@ coins.isValidCoin = typeforce.oneOf(
   coins.isDynamic,
   coins.isBitcoinAir,
   coins.isHash,
-  coins.isXuez
+  coins.isXuez,
+  coins.isQbc
 )
 
 module.exports = coins
