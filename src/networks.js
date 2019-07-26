@@ -14,6 +14,17 @@ module.exports = {
     wif: 0x3F,
     coin: coins.HASH
   },
+  nyc3: {
+    messagePrefix: '\x18Bitcoin Signed Message:\n',
+    bip32: {
+      public: 0x0877a12a,
+      private: 0x0877a12a
+    },
+    pubKeyHash: 0x35,
+    scriptHash: 0x7a,
+    wif: 0x80,
+    coin: coins.NYC3
+  },
   qbc: {
     messagePrefix: '\x18Bitcoin Signed Message:\n',
     bip32: {
