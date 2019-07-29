@@ -7,11 +7,22 @@ module.exports = {
     messagePrefix: '\x18Bitcoin Signed Message:\n',
     bip32: {
       public: 0x0488b21e,
-      private: 0x0488ade4
+      private: 0x04358394
     },
-    pubKeyHash: 0x28, // https://dash-docs.github.io/en/developer-reference#opcodes
+    pubKeyHash: 0x28,
     scriptHash: 0x17,
     wif: 0x3F,
+    coin: coins.SIN
+  },
+  sin: {
+    messagePrefix: '\x18Bitcoin Signed Message:\n',
+    bip32: {
+      public: 0x043587cf,
+      private: 0x0488ade4
+    },
+    pubKeyHash: 0x3f, // https://dash-docs.github.io/en/developer-reference#opcodes
+    scriptHash: 0x5,
+    wif: 0xbf,
     coin: coins.HASH
   },
   nyc3: {
