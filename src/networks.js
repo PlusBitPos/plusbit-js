@@ -285,9 +285,9 @@ module.exports = {
       public: 0x0488B21F,
       private: 0x0488ADE5
     },
-    pubKeyHash: 0x3d,
-    scriptHash: 0x56,
-    wif: 0xbd,
+    pubKeyHash: 61,
+    scriptHash: 86,
+    wif: 189,
     consensusBranchId: {
       1: 0x00,
       2: 0x00,
