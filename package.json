@@ -46,6 +46,7 @@
     "merkle-lib": "^2.0.10",
     "pushdata-bitcoin": "^1.0.1",
     "randombytes": "^2.0.1",
+    "react-native-crypto": "^2.2.0",
     "safe-buffer": "^5.0.1",
     "typeforce": "^1.11.3",
     "varuint-bitcoin": "^1.0.4",
