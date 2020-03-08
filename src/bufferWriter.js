@@ -1,4 +1,4 @@
-var Buffer = require('safe-buffer').Buffer
+var Buffer = require('buffer').Buffer
 var bufferutils = require('./bufferutils')
 var varuint = require('varuint-bitcoin')
 

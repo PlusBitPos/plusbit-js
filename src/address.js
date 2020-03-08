@@ -1,4 +1,4 @@
-var Buffer = require('safe-buffer').Buffer
+var Buffer = require('buffer').Buffer
 var bech32 = require('bech32')
 var bs58check = require('bs58check')
 var bscript = require('./script')

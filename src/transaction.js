@@ -1,4 +1,4 @@
-var Buffer = require('safe-buffer').Buffer
+var Buffer = require('buffer').Buffer
 var BufferWriter = require('./bufferWriter')
 var bcrypto = require('./crypto')
 var bscript = require('./script')
