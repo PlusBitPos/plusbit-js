@@ -1,5 +1,6 @@
 var Buffer = require('buffer').Buffer
-var createHmac = require('react-native-crypto').createHmacvar
+var createHmac = require('react-native-crypto').createHmac
+var typeforce = require('typeforce')
 var types = require('./types')
 
 var BigInteger = require('bigi')
