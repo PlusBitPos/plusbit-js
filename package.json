@@ -1,5 +1,5 @@
 {
-  "name": "genesis-js",
+  "name": "plusbit-js",
   "version": "1.3.0",
   "description": "Client-side Bitcoin JavaScript library",
   "main": "./src/index.js",
