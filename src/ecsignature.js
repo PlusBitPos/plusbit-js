@@ -5,7 +5,8 @@ var types = require('./types')
 var BigInteger = require('bigi')
 
 function ECSignature (r, s) {
-  typeforce(types.tuple(types.BigInt, types.BigInt), arguments)
+  //typeforce(types.tuple(types.BigInt, types.BigInt), arguments)
+  // Above line fails when compile in IPA for iOS release.
 
   this.r = r
   this.s = s
