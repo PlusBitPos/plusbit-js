@@ -75,7 +75,8 @@ function deterministicGenerateK (hash, x, checkSig) {
 var N_OVER_TWO = secp256k1.n.shiftRight(1)
 
 function sign (hash, d) {
-  typeforce(types.tuple(types.Hash256bit, types.BigInt), arguments)
+  //typeforce(types.tuple(types.Hash256bit, types.BigInt), arguments)
+  // Above line fails when compile in IPA for iOS release.
 
   var x = d.toBuffer(32)
   var e = BigInteger.fromBuffer(hash)
