@@ -18,7 +18,7 @@ const coins = {
   NYC3: 'nyc3',
   SIN: 'sin',
   CFE: 'cfe',
-  SAFE: 'SAFE'
+  SAFECOIN: 'safecoin'
 }
 
 coins.isBitcoin = function (network) {
@@ -72,8 +72,8 @@ coins.isCfe = function (network) {
   return typeforce.value(coins.CFE)(network.coin)
 }
 
-coins.isSafe = function (network) {
-  return typeforce.value(coins.SAFE)(network.coin)
+coins.isSafecoin = function (network) {
+  return typeforce.value(coins.SAFECOIN)(network.coin)
 }
 
 coins.isValidCoin = typeforce.oneOf(
@@ -92,7 +92,7 @@ coins.isValidCoin = typeforce.oneOf(
   coins.isNyc3,
   coins.isSin,
   coins.isCfe,
-  coins.isSafe
+  coins.isSafecoin
 )
 
 module.exports = coins

@@ -278,8 +278,8 @@ module.exports = {
     },
     coin: coins.ZEL
   },
-  SAFE: {
-    messagePrefix: '\x18ZCash Signed Message:\n',
+  safecoin: {
+    messagePrefix: '\x18safecoin Signed Message:\n',
     bech32: 'bc',
     bip32: {
       public: 0x0488B21F,

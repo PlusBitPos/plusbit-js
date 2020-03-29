@@ -15,7 +15,7 @@ var curve = ecurve.getCurveByName('secp256k1')
 var fastcurve = require('./fastcurve')
 
 function HDNode (keyPair, chainCode) {
-  typeforce(types.tuple('ECPair', types.Buffer256bit), arguments)
+  //typeforce(types.tuple('ECPair', types.Buffer256bit), arguments)
 
   if (!keyPair.compressed) throw new TypeError('BIP32 only allows compressed keyPairs')
 
@@ -32,7 +32,7 @@ HDNode.LENGTH = 78
 HDNode.MASTER_SECRET = Buffer.from('Bitcoin seed', 'utf8')
 
 HDNode.fromSeedBuffer = function (seed, network) {
-  typeforce(types.tuple(types.Buffer, types.maybe(types.Network)), arguments)
+  //typeforce(types.tuple(types.Buffer, types.maybe(types.Network)), arguments)
 
   if (seed.length < 16) throw new TypeError('Seed should be at least 128 bits')
   if (seed.length > 64) throw new TypeError('Seed should be at most 512 bits')

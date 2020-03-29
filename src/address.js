@@ -35,7 +35,7 @@ function fromBech32 (address) {
 }
 
 function toBase58Check (hash, version) {
-  typeforce(types.tuple(types.Hash160bit, types.UInt16), arguments)
+  //typeforce(types.tuple(types.Hash160bit, types.UInt16), arguments)
 
   // Zcash adds an extra prefix resulting in a bigger (22 bytes) payload. We identify them Zcash by checking if the
   // version is multibyte (2 bytes instead of 1)

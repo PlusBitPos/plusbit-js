@@ -14,11 +14,11 @@ var secp256k1 = ecurve.getCurveByName('secp256k1')
 
 // https://tools.ietf.org/html/rfc6979#section-3.2
 function deterministicGenerateK (hash, x, checkSig) {
-  typeforce(types.tuple(
+  /*typeforce(types.tuple(
     types.Hash256bit,
     types.Buffer256bit,
     types.Function
-  ), arguments)
+  ), arguments)*/
 
   // Step A, ignored as hash already provided
   // Step B
@@ -107,11 +107,11 @@ function sign (hash, d) {
 }
 
 function verify (hash, signature, Q) {
-  typeforce(types.tuple(
+  /*typeforce(types.tuple(
     types.Hash256bit,
     types.ECSignature,
     types.ECPoint
-  ), arguments)
+  ), arguments)*/
 
   var n = secp256k1.n
   var G = secp256k1.G

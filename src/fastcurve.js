@@ -26,7 +26,7 @@ try {
  * @return {undefined}
  */
 var publicKeyCreate = function (buffer, compressed) {
-  typeforce(types.tuple(types.Buffer256bit, types.Boolean), arguments)
+  //typeforce(types.tuple(types.Buffer256bit, types.Boolean), arguments)
 
   if (!available) {
     return undefined
@@ -46,7 +46,7 @@ var publicKeyCreate = function (buffer, compressed) {
  * @return {ECSignature}
  */
 var sign = function (hash, d) {
-  typeforce(types.tuple(types.Buffer256bit, types.BigInt), arguments)
+  //typeforce(types.tuple(types.Buffer256bit, types.BigInt), arguments)
 
   if (!available) {
     return undefined
@@ -68,12 +68,12 @@ var sign = function (hash, d) {
  * @return {Boolean}
  */
 var verify = function (hash, sig, pubkey) {
-  typeforce(types.tuple(
+  /*typeforce(types.tuple(
     types.Hash256bit,
     types.ECSignature,
     // both compressed and uncompressed public keys are fine
     types.oneOf(types.BufferN(33), types.BufferN(65))),
-    arguments)
+    arguments)*/
 
   if (!available) {
     return undefined

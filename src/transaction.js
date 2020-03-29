@@ -376,12 +376,12 @@ Transaction.prototype.isCoinbase = function () {
 }
 
 Transaction.prototype.addInput = function (hash, index, sequence, scriptSig) {
-  typeforce(types.tuple(
+  /*typeforce(types.tuple(
     types.Hash256bit,
     types.UInt32,
     types.maybe(types.UInt32),
     types.maybe(types.Buffer)
-  ), arguments)
+  ), arguments)*/
 
   if (types.Null(sequence)) {
     sequence = Transaction.DEFAULT_SEQUENCE
@@ -398,7 +398,7 @@ Transaction.prototype.addInput = function (hash, index, sequence, scriptSig) {
 }
 
 Transaction.prototype.addOutput = function (scriptPubKey, value) {
-  typeforce(types.tuple(types.Buffer, types.Satoshi), arguments)
+  //typeforce(types.tuple(types.Buffer, types.Satoshi), arguments)
 
   // Add the output and return the output's index
   return (this.outs.push({
@@ -622,7 +622,7 @@ Transaction.prototype.getHeader = function () {
  * This hash can then be used to sign the provided transaction input.
  */
 Transaction.prototype.hashForSignature = function (inIndex, prevOutScript, hashType) {
-  typeforce(types.tuple(types.UInt32, types.Buffer, /* types.UInt8 */ types.Number), arguments)
+  //typeforce(types.tuple(types.UInt32, types.Buffer, /* types.UInt8 */ types.Number), arguments)
 
   // https://github.com/bitcoin/bitcoin/blob/master/src/test/sighash_tests.cpp#L29
   if (inIndex >= this.ins.length) return ONE
@@ -792,7 +792,7 @@ Transaction.prototype.getOutputsHash = function (hashType, inIndex) {
  * @returns double SHA-256 or 256-bit BLAKE2b hash
  */
 Transaction.prototype.hashForZcashSignature = function (inIndex, prevOutScript, value, hashType) {
-  typeforce(types.tuple(types.UInt32, types.Buffer, types.Satoshi, types.UInt32), arguments)
+  //typeforce(types.tuple(types.UInt32, types.Buffer, types.Satoshi, types.UInt32), arguments)
   if (!coins.isZcash(this.network)) {
     throw new Error('hashForZcashSignature can only be called when using Zcash network')
   }
@@ -870,7 +870,7 @@ Transaction.prototype.hashForZcashSignature = function (inIndex, prevOutScript, 
 }
 
 Transaction.prototype.hashForWitnessV0 = function (inIndex, prevOutScript, value, hashType) {
-  typeforce(types.tuple(types.UInt32, types.Buffer, types.Satoshi, types.UInt32), arguments)
+  //typeforce(types.tuple(types.UInt32, types.Buffer, types.Satoshi, types.UInt32), arguments)
 
   var hashPrevouts = this.getPrevoutHash(hashType)
   var hashSequence = this.getSequenceHash(hashType)
@@ -896,7 +896,7 @@ Transaction.prototype.hashForWitnessV0 = function (inIndex, prevOutScript, value
  * Hash transaction for signing a specific input for Bitcoin Cash.
  */
 Transaction.prototype.hashForCashSignature = function (inIndex, prevOutScript, inAmount, hashType) {
-  typeforce(types.tuple(types.UInt32, types.Buffer, /* types.UInt8 */ types.Number, types.maybe(types.UInt53)), arguments)
+  //typeforce(types.tuple(types.UInt32, types.Buffer, /* types.UInt8 */ types.Number, types.maybe(types.UInt53)), arguments)
 
   // This function works the way it does because Bitcoin Cash
   // uses BIP143 as their replay protection, AND their algo
@@ -921,7 +921,7 @@ Transaction.prototype.hashForCashSignature = function (inIndex, prevOutScript, i
  * Hash transaction for signing a specific input for Bitcoin Gold.
  */
 Transaction.prototype.hashForGoldSignature = function (inIndex, prevOutScript, inAmount, hashType, sigVersion) {
-  typeforce(types.tuple(types.UInt32, types.Buffer, /* types.UInt8 */ types.Number, types.maybe(types.UInt53)), arguments)
+  //typeforce(types.tuple(types.UInt32, types.Buffer, /* types.UInt8 */ types.Number, types.maybe(types.UInt53)), arguments)
 
   // Bitcoin Gold also implements segregated witness
   // therefore we can pull out the setting of nForkHashType
@@ -1113,13 +1113,13 @@ Transaction.prototype.toHex = function () {
 }
 
 Transaction.prototype.setInputScript = function (index, scriptSig) {
-  typeforce(types.tuple(types.Number, types.Buffer), arguments)
+  //typeforce(types.tuple(types.Number, types.Buffer), arguments)
 
   this.ins[index].script = scriptSig
 }
 
 Transaction.prototype.setWitness = function (index, witness) {
-  typeforce(types.tuple(types.Number, [types.Buffer]), arguments)
+  //typeforce(types.tuple(types.Number, [types.Buffer]), arguments)
 
   this.ins[index].witness = witness
 }
