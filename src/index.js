@@ -20,5 +20,6 @@ module.exports = {
   crypto: require('./crypto'),
   networks: require('./networks'),
   opcodes: require('bitcoin-ops'),
-  script: script
+  script: script,
+  turtlecoin: require('turtlecoin-utils')
 }
