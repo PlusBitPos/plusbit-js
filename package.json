@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wkibbler/genesis-js.git"
+    "url": "https://github.com/plusbitpos/plusbit-js.git"
   },
   "files": [
     "src"
@@ -46,7 +46,6 @@
     "pushdata-bitcoin": "^1.0.1",
     "react-native-crypto": "^2.2.0",
     "react-native-randombytes": "^3.5.3",
-    "turtlecoin-utils": "git+https://github.com/libtechnologies-io/turtlecoin-utils.git",
     "typeforce": "^1.11.3",
     "varuint-bitcoin": "^1.0.4",
     "wif": "^2.0.1"
